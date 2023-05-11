@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MutanteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('mutante');
 });
+
+Route::post('/mutante', [$MutanteController, 'detectar'])->name('mutacion');
