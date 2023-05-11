@@ -1,7 +1,18 @@
-<form action="" method="post">
-    @csrf
-<label for="">Cadena de Nucleótidos:</label>
-<input type="text" name="arn" id="arn">
-<button>Enviar</button>
+@extends('app')
 
-</form>
+@section('contenido')
+
+<div class="formulario">
+
+    <form action="#" method="post">
+        @csrf
+    <label for="">Cadena de Nucleótidos:</label><br>
+    <input type="text" name="arn" id="arn"><br>
+    <button>Enviar</button>
+
+    </form>
+
+</div>
+
+
+@endsection
