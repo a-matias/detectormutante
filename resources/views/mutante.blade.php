@@ -4,11 +4,11 @@
 
 <div class="formulario">
 
-    <form action="#" method="post">
+    <form action="{{ route ('mutacion') }}" method="post">
         @csrf
-    <label for="">Cadena de Nucleótidos:</label><br>
-    <input type="text" name="arn" id="arn"><br>
-    <button>Enviar</button>
+    <label for="secuenciaArn">Cadena de Nucleótidos:</label><br>
+    <input type="text" name="secuenciaArn" id="secuenciaArn"><br>
+    <button>Detectar</button>
 
     </form>
 
