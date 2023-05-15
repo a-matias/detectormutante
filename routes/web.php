@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('mutante');
 });
 
-Route::post('/mutante', [$MutanteController, 'detectar'])->name('mutacion');
+Route::post('/mutante', [MutanteController::class, 'detectar'])->name('mutacion');
