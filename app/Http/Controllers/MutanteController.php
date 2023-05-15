@@ -58,8 +58,8 @@ class MutanteController extends Controller
 {
     public function detectar(Request $request)
     {
-        $secuencia = strtoupper($request->input('secuenciaArn'));
-        $n = strlen($secuencia);
+        echo $secuencia = strtoupper($request->input('secuenciaArn'));
+        echo $n = strlen($secuencia);
     
         // Crea una matriz NxN a partir de la secuencia
         $matriz = [];
@@ -81,11 +81,16 @@ class MutanteController extends Controller
                 break;
             }
         }
+
+
     
         // Devuelve una respuesta JSON indicando si es un mutante o no
+
         return response()->json([
             'mutante' => $patronMutacion,
         ]);
+    
+       
     }
 }
 */
