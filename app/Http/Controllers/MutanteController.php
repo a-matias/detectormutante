@@ -12,7 +12,7 @@ class MutanteController extends Controller
         
         // Requiere una cadena de Arn para poder verificar si es mutación o no.
         $secuencia = $this->validate(request(), [
-            'secuenciaArn' => 'required'
+            'secuenciaArn' => 'required:min3'
         ]);
         
 
