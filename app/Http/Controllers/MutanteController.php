@@ -10,9 +10,9 @@ class MutanteController extends Controller
     public function detectar(Request $request)
     {
         
-        // Requiere una cadena de Arn para poder verificar si es mutación o no.
+        // Requiere una cadena Arn de 3 caracteres para poder verificar si es mutación o no.
         $secuencia = $this->validate(request(), [
-            'secuenciaArn' => 'required:min3'
+            'secuenciaArn' => 'required|min:3'
         ]);
         
 
@@ -58,11 +58,5 @@ class MutanteController extends Controller
         return back();
 
 
-    /*
-        // Devuelve una respuesta JSON indicando si es un mutante o no
-        return response()->json([
-            'mutante' => $patronMutacion,
-            'matriz' => $matriz
-        ]);*/
     }
 }
